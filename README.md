@@ -5,6 +5,6 @@ Combination implemented
 
 |No. | Data Structure  | Algorithm |
 | -- | --------------- | --------- |
-|2   | ArrayList       | Greedy    |
-|3   | DisjointSet     | Greedy    |
-|4   | Map             | Greedy    |
+|1   | ArrayList       | Greedy    |
+|2   | DisjointSet     | Greedy    |
+|3   | Map             | Greedy    |
