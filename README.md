@@ -7,3 +7,9 @@ Combination implemented
 | ArrayList      | Greedy    |
 | DisjointSet    | Greedy    |
 | Map            | Greedy    |
+
+| Data Structure  | Algorithm |
+| --------------- | --------- |
+| ArrayList       | Greedy    |
+| DisjointSet     | Greedy    |
+| Map             | Greedy    |
