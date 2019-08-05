@@ -3,8 +3,8 @@ Data Structure and Algorithm Assignment
 
 Combination implemented
 
-| Data Structure  | Algorithm |
-| --------------- | --------- |
-| ArrayList       | Greedy    |
-| DisjointSet     | Greedy    |
-| Map             | Greedy    |
+|No. | Data Structure  | Algorithm |
+| -- | --------------- | --------- |
+|2   | ArrayList       | Greedy    |
+|3   | DisjointSet     | Greedy    |
+|4   | Map             | Greedy    |
