@@ -1,36 +1,47 @@
-package GreedyAlgorithm;
+package ArrayList;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.PriorityQueue;
+import java.util.Random;
 
-public class JobAssignerGreedy {
+public class JobAssigner {
 	
 	public static void main(String[] args) {
-		ArrayList<Job> jobs = new ArrayList<Job>();
-		jobs.add(new Job('a', 2, 100));
-		jobs.add(new Job('b', 1, 19));
-		jobs.add(new Job('c', 2, 27));
-		jobs.add(new Job('d', 1, 25));
-		jobs.add(new Job('e', 3, 15));
+		
+		
+		ArrayList<Job> jobs = createJobs(100);
+
 		
 		System.out.println("Input");
-		for (Job job: jobs) {
-			System.out.println(job.toString());
-		}
+		printJobs(jobs);
 		
-		Collections.sort(jobs);
-	
 		ArrayList<Job> scheduledJobs = scheduleJob(jobs);
 		
 		System.out.println("Output");
-		for (Job job: scheduledJobs) {
-			System.out.println(job.toString());
-		}
+		printJobs(scheduledJobs);
 		
 	}
 	
+	private static void printJobs(ArrayList<Job> jobs) {
+		for (Job job: jobs) {
+			System.out.println(job.toString());
+		}
+	}
+	
+	private static ArrayList<Job> createJobs(int size){
+		Random random = new Random();
+		
+		ArrayList<Job> jobs = new ArrayList<Job>();
+		for (int i = 97; i < 123 ; i++) {
+			jobs.add(new Job((char)i, random.nextInt(123-97)+1, random.nextInt(100)+1));
+		}
+		return jobs;
+	}
 	private static ArrayList<Job> scheduleJob(ArrayList<Job> jobs) {
+		
+		Collections.sort(jobs);
+		
 		int size = jobs.size();
 		Boolean[] slots = new Boolean[size];
 		int[] result = new int[size];

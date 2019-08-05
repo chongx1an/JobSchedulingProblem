@@ -2,19 +2,20 @@ package DisjointSet;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
-import GreedyAlgorithm.Job;
+import ArrayList.Job;
 
-public class JobAssignerDisjointSet {
+public class JobAssigner {
 	
 	public static void main(String[] args) {
 		
+		Random random = new Random();
+		
 		ArrayList<Job> jobs = new ArrayList<Job>();
-		jobs.add(new Job('a', 2, 100));
-		jobs.add(new Job('b', 1, 19));
-		jobs.add(new Job('c', 2, 27));
-		jobs.add(new Job('d', 1, 25));
-		jobs.add(new Job('e', 3, 15));
+		for (int i = 0; i < 100 ; i++) {
+			jobs.add(new Job((char)i, random.nextInt(100)+1, random.nextInt(100)+1));
+		}
 		
 		System.out.println("Input");
 		for (Job job: jobs) {

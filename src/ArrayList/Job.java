@@ -1,4 +1,4 @@
-package GreedyAlgorithm;
+package ArrayList;
 
 public class Job implements Comparable<Job>{
 	private char id;
